@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Dancing Script', cursive;
+            color: #e91e63;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            background-image: 
+                url("nanobombs-cat.jpeg"),
+                url("Screenshot_20231020_060631_WhatsApp.jpg"),
+                url("Love-message.jpg"),
+                url("Snapchat-706465237.jpg"),
+                url("IMG20240904101930.jpg"),
+                url("IMG_20241021_202800_501.jpg"),
+                url("IMG_20241021_202800_076.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            animation: bgSlide 40s infinite;
+        }
+        @keyframes bgSlide {
+            0%, 14% { background-image: url("Screenshot_20231020_060631_WhatsApp.jpg"); }
+            14.1%, 28% { background-image: url("Love-message.jpg"); }
+            28.1%, 42% { background-image: url("Snapchat-706465237.jpg"); }
+            42.1%, 56% { background-image: url("IMG20240904101930.jpg"); }
+            56.1%, 70% { background-image: url("IMG_20241021_202800_501.jpg"); }
+            70.1%, 84% { background-image: url("IMG_20241021_202800_076.jpg"); }
+            84.1%, 100% { background-image: url("nanobombs-cat.jpeg"); }
+        }
+        h1 {
+            font-size: clamp(3rem, 12vw, 9rem);
+            font-weight: 700;
+            margin: 0 0 1.5rem 0;
+            text-align: center;
+            letter-spacing: 3px;
+            line-height: 1.1;
+        }
+        .cat {
+            max-width: 85vw;
+            max-height: 35vh;
+            width: auto;
+            height: auto;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+        @media (max-width: 480px) {
+            h1 { font-size: clamp(2.5rem, 10vw, 6rem); margin-bottom: 1rem; }
+            .cat { max-height: 28vh; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Will you be my Valentine?</h1>
+    <img src="nanobombs-cat.jpeg" alt="Cute cat holding a rose" class="cat" />
+</body>
+</html>
